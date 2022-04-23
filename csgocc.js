@@ -22,7 +22,7 @@ function csgocasecalc()
     let CS = intWARI(wallet, key);
     let WK = intWARI(WL, Case);
 
-    while (CS >= WK) {
+    while (CS > WK) {
         CS--;
         WL += key;
         WK = intWARI(WL, Case);
