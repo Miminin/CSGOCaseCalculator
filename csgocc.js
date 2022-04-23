@@ -28,8 +28,6 @@ function csgocasecalc()
         WK = intWARI(WL, Case);
     }
 
-    document.getElementById('canopen').innerHTML = 'you can open ${CS} cases\n'
-    document.getElementById('walletleft').innerHTML = '${WL - Case * CS} meny left'
-
-
+    document.getElementById('canopen').innerHTML = CS
+    document.getElementById('walletleft').innerHTML = WL - Case * CS
 }
