@@ -2,30 +2,36 @@
 <html>
 <head>
     <meta charset="UTF=8">
-    <title>CSGO CASE CALCULATOR</title>
+    <link rel="stylesheet" href="csgocc.css">
+    <title> CASE OPENING CALCULATOR</title>
 </head>
 <body>
     <script type="text/javascript" src="csgocc.js"></script>
     <center>
+        <h1>CS:GO CASE OPENING CALCULATOR</h1>
+        <h4>Discription: This can calculate how many cases you can open in limited wallet money.<br />
+            Case price must be little higher than actual price.
+        </h4>
         <form name="form">
             <label for="wallet">Wallet Money</label>
-            <input type="number" id="wallet" required maxlength=8 size="10">
+            <input type="number" id="wallet" required maxlength=8 size="10" />
+            <br />
             <label for="case">Case Price on market</label>
-            <input type="number" id="case" required maxlength=8 size="10">
-            <label for="key price">Key Price on market</label>
-            <select id="key price">
-                <option value="1">282 JPYen</option>
-                <option value="2">265 JPYen</option>
+            <input type="number" id="case" required maxlength=8 size="10" />
+            <br />
+            <label for="keyprice">Key Price</label>
+            <select id="keyprice">
+                <option value="282">282 JPY</option>
+                <option value="265">265 JPY</option>
             </select>
         </form>
 
         <input type="button" value="send" onclick="csgocasecalc()" /><br /><br />
-        <label for="canopen">You can open : </label>
-        <output id="canopen"/><br />
+        You can open : 
+        <output id="canopen"></output>cases<br />
 
-        <label for="walletleft">your wallet money left : </label>
-        <output id="walletleft"/>
+        Your wallet money left : 
+        <output id="walletleft"></output>JPY<br />
     </center>
-    
 </body>
 </html>

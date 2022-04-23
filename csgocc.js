@@ -12,15 +12,15 @@ function csgocasecalc()
     let wallet = 0;
     let Case = 0;
     let key = 0;
-    let CS, WL, WK;
 
     wallet = document.getElementById('wallet').value;
     Case = document.getElementById('case').value;
-    key = document.getElementById('case').value;
+    key = document.getElementById('keyprice').value;
+    key = Number(key);
 
-    WL = wallet % key;
-    CS = intWARI(wallet, key);
-    WK = intWARI(WL, Case);
+    let WL = wallet % key;
+    let CS = intWARI(wallet, key);
+    let WK = intWARI(WL, Case);
 
     while (CS >= WK) {
         CS--;
@@ -28,6 +28,7 @@ function csgocasecalc()
         WK = intWARI(WL, Case);
     }
 
-    document.getElementById('canopen').innerHTML = CS
-    document.getElementById('walletleft').innerHTML = WL - Case * CS
+    document.getElementById('canopen').innerText = CS;
+    document.getElementById('walletleft').innerText = WL-Case*CS;
+    document.getElementById('whatkey').innerText = key;
 }
