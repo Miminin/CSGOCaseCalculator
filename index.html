@@ -1,16 +1,31 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset ="UTF=8">
+<head>
+    <meta charset="UTF=8">
     <title>CSGO CASE CALCULATOR</title>
-  </head>
-  <body>
-    <label for="wallet">Wallet Money</label>
-    <input type="number" id="wallet" required maxlength=8 size="10">
-    <label for="case">Case Price on market</label>
-    <input type="number" id="wallet" required maxlength=8 size="10">
-    <label for="key">Key Price (282 JPyen is default now)</label>
-    <input type="number" id="wallet" required maxlength=8 size="10">
+</head>
+<body>
     <script type="text/javascript" src="csgocc.js"></script>
-  </body>
+    <center>
+        <form name="form">
+            <label for="wallet">Wallet Money</label>
+            <input type="number" id="wallet" required maxlength=8 size="10">
+            <label for="case">Case Price on market</label>
+            <input type="number" id="case" required maxlength=8 size="10">
+            <label for="key price">Key Price on market</label>
+            <select id="key price">
+                <option value="1">282 JPYen</option>
+                <option value="2">265 JPYen</option>
+            </select>
+        </form>
+
+        <input type="button" value="send" onclick="csgocasecalc()" /><br /><br />
+        <label for="canopen">You can open : </label>
+        <output id="canopen"/><br />
+
+        <label for="walletleft">your wallet money left : </label>
+        <output id="walletleft"/>
+    </center>
+    
+</body>
 </html>
